@@ -1,0 +1,461 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed&family=Barlow:wght@600;700&display=swap');
+/* Navigation Bar */
+.navBar {
+    height: 3.5rem;
+    max-width: 100vw;
+    border: 1px solid lightgray;
+    position: relative;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-content: space-between;
+    background-color: white;
+}
+
+.content {
+    display: flex;
+    width: 750px;
+    justify-content: center;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.navBar a {
+    color: black;
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 500;
+}
+
+/* Navigation Menu - Image */
+.navBar img {
+    height: 6rem;
+    mix-blend-mode: multiply;
+}
+
+/* Dropdown Styles */
+.dropdown {
+    position: relative;
+    display: inline-block;
+    margin: 0;
+}
+
+.navBar .content a {
+    color: black;
+    text-decoration: none;
+    padding: 12px;
+    border-radius: 5px;
+    color: white;
+}
+
+.dropdown a:hover {
+    background-color: rgb(239, 238, 238);
+    cursor: pointer;
+    color: black;
+}
+.navBar{
+    font-family: poppins;
+    text-transform: none;
+    background: radial-gradient(at top,var(---bg-grad-1),var(--bg-grad-2));
+    border: none;
+}
+.dropdown_menu {
+    display: none;
+    position: absolute;
+    left: 0%;
+    top: 100%;
+    background-color: white;
+    box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+    min-width: 150px;
+    padding: 10px;
+    z-index: 1;
+    margin-top: 10px;
+}
+
+.dropdown a i {
+    font-size: 15px;
+    margin-left: 2px;
+    color: white;
+}
+
+#menu2 {
+    left: 0%;
+}
+
+#menu3 {
+    left: 0%;
+    min-width: 170px;
+}
+
+#menu4 {
+    left: 0%;
+    min-width: 225px;
+}
+
+#menu1 ul li a,
+#menu2 ul li a,
+#menu3 ul li a,
+#menu4 ul li a,
+#menu5 ul li a {
+    display: block;
+    color: black;
+}
+
+#menu5 {
+    left: 0%;
+}
+
+.dropdown_menu ul {
+    display: block;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.dropdown_menu ul li {
+    width: 100%;
+    padding: 0px;
+    padding-top: 0px;
+}
+
+/* Show dropdown menu on hover */
+.dropdown:hover .dropdown_menu {
+    display: block;
+}
+
+/*Making Variables*/
+:root{
+    --light-text: #fff;
+    --dark-text: hsl(229,25%,31%);
+    --score-text: hsl(229,64%,46%);
+    --outline: hsl(217,16%, 45%);
+    ---bg-grad-1: hsl(214,47%,23%);
+    --bg-grad-2: hsl(237,49%,15%);
+    --scissor-1: hsl(39,89%,49%);
+    --scissor-2: hsl(40,84%,53%);
+    --paper-1: hsl(230,89%,62%);
+    --paper-2: hsl(230,89%,65%);
+    --rock-1: hsl(349,71%,52%);
+    --rock-2: hsl(349,70%,56%);
+    --shadow-light: #00000026;
+    --shadow-medium: #0000004d;
+
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Barlow Semi Condensed', sans-serif;
+    background: radial-gradient(at top,var(---bg-grad-1),var(--bg-grad-2));
+    min-height: 100vh;
+    text-transform: uppercase;
+    color: var(--light-text);
+}
+
+/*Main Content*/
+
+.container{
+    position: relative;
+    max-width: 700px;
+    margin: 0 auto;
+    padding-top: 2rem;
+}
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 150px;
+    border: 3px solid var(--outline);
+    border-radius: 20px;
+    padding: 1rem 1.4rem 1rem 2rem;
+}
+.score{
+    color: var(--score-text);
+    border: 1px solid white;
+    text-align: center;
+    height: 100%;
+    width: 9rem;
+    background-color: #fff;
+    border-radius: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    line-height: 1;
+}
+.score_title{
+    font-size: 1.1rem;
+    letter-spacing: 0.1em;
+    color: var(--score-text);
+}
+.score_number{
+    font-size: 4rem;
+    font-weight: 700;
+    color: var(--dark-text);
+}
+.logo img{
+    height: 100%;
+}
+
+/*Game*/
+.game{
+    position: relative;
+    display: grid;
+    grid-template-columns: (repeat(2,1fr));
+    grid-template-areas: 
+    "paper scissor"
+    "rock rock";
+    place-items: center;
+    height: 30rem;
+    padding: 4rem;
+}
+.game::before{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 28%;
+    top: 30%;
+    background: url(bg-triangle.svg) no-repeat;
+    z-index: -1;
+
+}
+.choice-btn[data-choice="paper"]{
+    grid-area: paper;
+}
+.choice-btn[data-choice="scissor"]{
+    grid-area: scissor;
+}
+.choice-btn[data-choice="rock"]{
+    grid-area: rock ;
+}
+.choice-btn{
+    border: none;
+    outline: none;
+    background: none;
+    cursor: pointer;
+}
+.choice{
+    position: relative;
+    width: 8.5rem;
+    height: 8.5rem;
+    background: white;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    box-shadow: inset 0 0.5rem var(--shadow-light);
+}
+.choice::before{
+    content: '';
+    position: absolute;
+    left: -15%;
+    top: -15%;
+    width: 130%;
+    height: 130%;
+    border-radius: 50%;
+    z-index: -1;
+}
+.choice.paper::before{
+    background: linear-gradient(to bottom, var(--paper-1),var(--paper-2));
+}
+.choice.rock::before{
+    background: linear-gradient(to bottom, var(--rock-1),var(--rock-2));
+}
+.choice.scissor::before{
+    background: linear-gradient(to bottom, var(--scissor-1),var(--scissor-2));
+}
+.choice img{
+    transform: scale(1.2);
+}
+.choice-btn:hover{
+    transform: scale(1.05);
+}
+.rules_btn{
+    position: absolute;
+    bottom: 2rem;
+    right: 2rem;
+    background: transparent;
+    outline: none;
+    color: var(--light-text);
+    border: 2px solid var(--outline);
+    border-radius: 0.6rem;
+    padding: 0.6rem 2.5rem;
+    font-family: inherit;
+    text-transform: inherit;
+    font-size: 1.3rem;
+    letter-spacing: 0.1rem;
+    cursor: pointer;
+}
+.rules_btn:active{
+    background-color: var(---bg-grad-1);
+}
+.modal{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    display: grid;
+    place-items: center;
+    background: var(--shadow-medium);
+    pointer-events: none;
+}
+.modal_container{
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    height: 22rem;
+    width: 20rem;
+    border-radius: 0.4rem;
+}
+.modal_container img{
+    transform: scale(0.8);
+}
+.modal_header{
+    margin: 1.5rem 1.5rem 0.5rem 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    color: black;
+}
+.close_btn{
+    background: transparent;
+    border: none;
+    cursor: pointer;
+}
+.show_modal{
+        opacity: 1;
+        pointer-events: initial;
+}
+
+/*Results*/
+.results{
+    display: grid;
+    place-items: center;
+    grid-template-columns: repeat(2,1fr);
+    grid-template-areas: 
+    "you-title ai-title"
+    "you-picked ai-picked";
+    max-width: 1000px;
+    margin: 0 auto;
+}
+.results_heading{
+    font-size: 1.5rem;
+    letter-spacing: 0.1em;
+    padding: 4rem 0 8rem;
+}
+.results_result{
+    min-width: 8.5rem;
+    min-height: 8.5rem;
+    background: #16213d;
+    border-radius: 50%;
+    transform: scale(1.4);
+    z-index: -1;
+}
+.results_heading:first-of-type{
+    grid-area: you-title;
+}
+.results_heading:last-of-type{
+    grid-area: ai-title;
+}
+.results_result:first-of-type{
+    grid-area: you-picked;
+}
+.results_result:last-of-type{
+    grid-area: ai-picked;
+}
+.results_winner{
+    grid-area: result_winner;
+    display: grid;
+    place-items: center;
+}
+.results_text{
+    font-size: 3.5rem;
+    padding-bottom: 1.5rem;
+    color: white;
+}
+.play_again{
+    background-color: white;
+    outline: none;
+    border: 2px solid transparent;
+    color: var(--dark-text);
+    border-radius: 0.6rem;
+    font-family: inherit;
+    text-transform: inherit;
+    padding: 0.6rem 3.5rem;
+    font-size: 1.3rem;
+    letter-spacing: 0.1em;
+    cursor: pointer;
+}
+.results.show_winner{
+    grid-template-columns: repeat(3,1fr);
+    grid-template-areas: 
+    "you-title . ai-title"
+    "you-picked result_winner ai-picked";
+}
+.hidden{
+    display: none;
+}
+
+
+
+/*Media Properties*/
+@media(max-width: 760px){
+    .results_result{
+        transform: scale(1);
+    }
+    .results_winner{
+        transform: scale(0.8);
+    }
+}
+
+@media(max-width: 700px){
+    .game::before{
+        background: none;
+    }
+}
+@media(max-width:540px){
+    .results_heading{
+        padding-bottom:60px ;
+    }
+    .results_winner{
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        transform: scale(0.6);
+    }
+    .results_result{
+        margin: 0 1.7rem;
+    }
+    .choice-btn{
+        transform: scale(1);
+    }
+    .game{
+        margin: 0;
+        padding: 0;
+    }
+}
+
+@media(max-width: 380px){
+    .rules_btn{
+        transform: scale(0.6);
+    }
+    .results_winner{
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        transform: scale(0.5);
+    }
+    .results_result{
+        transform: scale(0.8);
+        margin: 0 1rem;
+    }
+    .choice-btn{
+        transform: scale(0.9);
+    }
+}

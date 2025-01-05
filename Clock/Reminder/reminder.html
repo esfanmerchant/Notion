@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" />
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed&family=Barlow:wght@600;700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+    </style>
+    <link rel="icon" href="NotionImages/Notion-logo.svg.png" type="image/x-icon">
+    <link rel="stylesheet" href="reminder.css">
+    <title>ESHS - Reminder & Alarm</title>
+</head>
+
+<body>
+    <!-- NAVIGATON MENU SECTION STARTS -->
+
+    <header>
+        <div class="navBar">
+            <div class="content">
+                <img src="NotionImages/getzelt.com-integrate-notion-with-zelt-notion-logo.jpeg">
+                <div class="dropdown">
+                    <a href="../../notion.html">Home</a>
+                </div>
+                <div class="dropdown">
+                    <a href="#">Notes & To Dos  <i class="fa-solid fa-caret-down"></i></a>
+                    <div class="dropdown_menu" id="menu3">
+                        <ul>
+                            <li><a href="../../Notepad/notepad.html" target="_blank">Notepad</a></li>
+                            <li><a href="../../To DO list/tasklist.html" target="_blank">Task List</a></li>
+                            <li><a href="https://chat.openai.com" target="_blank">Ai Assistant</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <a href="#">Clock Tools <i class="fa-solid fa-caret-down"></i></a>
+                    <div class="dropdown_menu" id="menu3">
+                        <ul>
+                            <li><a href="" target="_blank">World Clock</a></li>
+                            <li><a href="../Reminder/reminder.html" target="_blank">Reminder</a></li>
+                            <li><a href="../Timer/timer.html" target="_blank">Stopwatch</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <a href="#">Finance <i class="fa-solid fa-caret-down"></i></a>
+                    <div class="dropdown_menu" id="menu3">
+                        <ul>
+                            <li><a href="../../Finance Manager/index.html" target="_blank">Finance Tracker</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <a href="#">Games <i class="fa-solid fa-caret-down"></i></a>
+                    <div class="dropdown_menu" id="menu4">
+                        <ul>
+                            <li><a href="../../Rock Paper Scissors/rockPaperScissors.html" target="_blank">Rock Paper
+                                    Scissors</a></li>
+                            <li><a href="../../Tic Tac Toe/tictactoe.html" target="_blank">Tic Tac Toe</a></li>
+                            <li><a href="../../Hangman/hangman.html" target="_blank">Hangman</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- NAVIGATION MENU ENDS -->
+     
+    <div id="hehe">
+        <div class="container">
+            <h1>Set a Reminder and Alarm</h1>
+            <form id="reminder-form">
+                <label for="reminder">Reminder:</label>
+                <input type="text" id="reminder" name="reminder" placeholder="Enter your reminder" required>
+
+                <label for="time">Time (HH:MM AM/PM):</label>
+                <input type="time" id="time" name="time" required>
+
+                <button type="submit">Set Reminder</button>
+            </form>
+            <br>
+            <hr>
+            <div id="reminder-list">
+                <h2>Your Reminders</h2>
+                <ul id="list"></ul>
+            </div>
+
+            <form id="alarm-form">
+                <label for="alarm-time">Set Alarm Time:</label>
+                <input type="time" id="alarm-time" required>
+
+                <button type="submit">Set Alarm</button>
+            </form>
+
+            <audio id="reminder-sound" src="mixkit-rooster-crowing-in-the-morning-2462 - Copy.wav" auto"></audio>
+            <audio id="alarm-sound" src="mixkit-digital-clock-digital-alarm-buzzer-992 - Copy.wav"
+                preload="auto"></audio>
+            <div id="alarm-notification" style="display: none;">It's time for your alarm!</div>
+        </div>
+    </div>
+    <script src="reminder.js"></script>
+</body>
+
+</html>

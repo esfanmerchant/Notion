@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notepad - Note your thoughts</title>
+    <link rel="stylesheet" href="notepad.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" />
+    <link rel="icon" href="NotionImages/Notion-logo.svg.png" type="image/x-icon">
+</head>
+
+<body>
+
+    <!-- NAVIGATON MENU SECTION STARTS -->
+
+    <header>
+        <div class="navBar">
+            <div class="content">
+                <img src="NotionImages/getzelt.com-integrate-notion-with-zelt-notion-logo.jpeg">
+                <div class="dropdown">
+                    <a href="../notion.html">Home</a>
+                </div>
+                <div class="dropdown">
+                    <a href="#">Notes & To Dos <i class="fa-solid fa-caret-down"></i></a>
+                    <div class="dropdown_menu" id="menu3">
+                        <ul>
+                            <li><a href="" target="_blank">Notepad</a></li>
+                            <li><a href="../To DO list/tasklist.html" target="_blank">Task List</a></li>
+                            <li><a href="https://chat.openai.com" target="_blank">Ai Assistant</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <a href="#">Clock Tools <i class="fa-solid fa-caret-down"></i></a>
+                    <div class="dropdown_menu" id="menu3">
+                        <ul>
+                            <li><a href="../Clock/Clock/wc.html" target="_blank">World Clock</a></li>
+                            <li><a href="../Clock/Reminder/reminder.html" target="_blank">Reminder</a></li>
+                            <li><a href="../Clock/Timer/timer.html" target="_blank">Stopwatch</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <a href="#">Finance <i class="fa-solid fa-caret-down"></i></a>
+                    <div class="dropdown_menu" id="menu3">
+                        <ul>
+                            <li><a href="../../Finance Manager/index.html" target="_blank">Finance Tracker</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <a href="#">Games <i class="fa-solid fa-caret-down"></i></a>
+                    <div class="dropdown_menu" id="menu4">
+                        <ul>
+                            <li><a href="../../Rock Paper Scissors/rockPaperScissors.html" target="_blank">Rock Paper
+                                    Scissors</a></li>
+                            <li><a href="../Tic Tac Toe/tictactoe.html" target="_blank">Tic Tac Toe</a></li>
+                            <li><a href="../Hangman/hangman.html" target="_blank">Hangman</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- NAVIGATION MENU ENDS -->
+
+    
+    <div class="popup-box">
+        <div class="popup">
+            <div class="content1">
+                <header>
+                    <p>Add A New Note</p>
+                    <i class="uil uil-times"></i>
+                </header>
+                <form action="#">
+                    <div class="row title">
+                        <label>Title: </label>
+                        <input type="text">
+                    </div>
+                    <div class="description title">
+                        <label>Description: </label>
+                        <textarea id=""></textarea>
+                    </div>
+                    <button class="btn">Add Note</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="wrapper">
+        <li class="addbox">
+            <div class="icon"><i class="uil uil-plus"></i></div>
+            <p>Add new note</p>
+        </li>
+    
+    </div>
+    <script src="notepad.js"></script>
+</body>
+
+</html>

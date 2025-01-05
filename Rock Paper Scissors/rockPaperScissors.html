@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="rockPaperScissors.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" />
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed&family=Barlow:wght@600;700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+    </style>
+    <link rel="icon" href="NotionImages/Notion-logo.svg.png" type="image/x-icon">
+</head>
+<body>
+
+        <!-- NAVIGATON MENU SECTION STARTS -->
+
+        <header>
+            <div class="navBar">
+                <div class="content">
+                    <img src="NotionImages/getzelt.com-integrate-notion-with-zelt-notion-logo.jpeg">
+                    <div class="dropdown">
+                        <a href="#">Notes & To Dos <i class="fa-solid fa-caret-down"></i></a>
+                        <div class="dropdown_menu" id="menu3">
+                            <ul>
+                                <li><a href="../Notepad/notepad.html" target="_blank">Notepad</a></li>
+                                <li><a href="../To DO list/tasklist.html" target="_blank">Task List</a></li>
+                                <li><a href="https://chat.openai.com" target="_blank">Ai Assistant</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="dropdown">
+                        <a href="#">Clock Tools <i class="fa-solid fa-caret-down"></i></a>
+                        <div class="dropdown_menu" id="menu3">
+                            <ul>
+                                <li><a href="../Clock/Clock/wc.html" target="_blank">World Clock</a></li>
+                                <li><a href="../Clock/Reminder/reminder.html" target="_blank">Reminder</a></li>
+                                <li><a href="../Clock/Timer/timer.html" target="_blank">Stopwatch</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="dropdown">
+                        <a href="#">Finance <i class="fa-solid fa-caret-down"></i></a>
+                        <div class="dropdown_menu" id="menu3">
+                            <ul>
+                                <li><a href="../Finance Manager/index.html" target="_blank">Finance Tracker</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="dropdown">
+                        <a href="#">Games <i class="fa-solid fa-caret-down"></i></a>
+                        <div class="dropdown_menu" id="menu4">
+                            <ul>
+                                <li><a href="" target="_blank">Rock Paper Scissors</a></li>
+                                <li><a href="../Tic Tac Toe/tictactoe.html" target="_blank">Tic Tac Toe</a></li>
+                                <li><a href="../angman/hangman.html" target="_blank">Hangman</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>    
+    
+        <!-- NAVIGATON MENU SECTION ENDS -->
+        
+
+    <div class="container">
+        <header class="header">
+            <img src="RPSImages/logo.svg" alt="logo">
+            <div class="score">
+                <div class="score_title">Score</div>
+                <div class="score_number">0</div>
+            </div>
+        </header>
+        <section class="game">
+            <button class="choice-btn" data-choice="paper">
+                <div class="choice paper">
+                    <img src="RPSImages/icon-paper.svg" alt="paper">
+                </div>
+            </button>
+            <button class="choice-btn" data-choice="scissor">
+                <div class="choice scissor">
+                    <img src="RPSImages/icon-scissor.svg" alt="scissor">
+                </div>
+            </button>
+            <button class="choice-btn" data-choice="rock">
+                <div class="choice rock">
+                    <img src="RPSImages/icon-rock.svg" alt="rock">   
+                </div>
+            </button>
+        </section>
+    </div>
+    <section class="results hidden">
+        <h2 class="results_heading">You Picked</h2>
+        <h2 class="results_heading">The House Picked</h2>
+        <div class="results_result"></div>
+        <div class="results_winner hidden">
+            <h3 class="results_text"></h3>
+            <button class="play_again">Play again</button>
+        </div>
+        <div class="results_result"></div> 
+    </section>
+    <button class="rules_btn">Rules</button>
+    <div class="modal">
+        <div class="modal_container">
+            <header class="modal_header">
+                <h2>Rules</h2>
+                <button class="close_btn"><img src="RPSImages/icon-close.svg" alt="close button"></button>
+            </header>
+            <img src="RPSImages/image-rules.svg" alt="rules image">
+        </div>
+    </div>
+
+    <script src="rockPaperScissor.js"></script>
+</body>
+</html>

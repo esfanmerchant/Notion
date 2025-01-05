@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Clock</title>
+</head>
+<body>
+    <!-- NAVIGATON MENU SECTION STARTS -->
+
+    <header>
+        <div class="navBar">
+            <div class="content">
+                <img src="NotionImages/getzelt.com-integrate-notion-with-zelt-notion-logo.jpeg">
+                <div class="dropdown">
+                    <a href="../notion.html">Home</a>
+                </div>
+                <div class="dropdown">
+                    <a href="#">Notes & To Dos<i class="fa-solid fa-caret-down"></i></a>
+                    <div class="dropdown_menu" id="menu3">
+                        <ul>
+                            <li><a href="../Notepad/notepad.html" target="_blank">Notepad</a></li>
+                            <li><a href="" target="_blank">Task List</a></li>
+                            <li><a href="https://chat.openai.com" target="_blank">Ai Assistant</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <a href="#">Clock Tools <i class="fa-solid fa-caret-down"></i></a>
+                    <div class="dropdown_menu" id="menu3">
+                        <ul>
+                            <li><a href="../Clock/Clock/wc.html" target="_blank">World Clock</a></li>
+                            <li><a href="../Clock/Reminder/reminder.html" target="_blank">Reminder</a></li>
+                            <li><a href="../Clock/Timer/timer.html" target="_blank">Stopwatch</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <a href="#">Finance <i class="fa-solid fa-caret-down"></i></a>
+                    <div class="dropdown_menu" id="menu3">
+                        <ul>
+                            <li><a href="../Finance Manager/index.html" target="_blank">Finance Tracker</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <a href="#">Games <i class="fa-solid fa-caret-down"></i></a>
+                    <div class="dropdown_menu" id="menu4">
+                        <ul>
+                            <li><a href="../Rock Paper Scissors/rockPaperScissors.html" target="_blank">Rock Paper Scissors</a></li>
+                            <li><a href="../../To DO list/tasklist.html" target="_blank">Tic Tac Toe</a></li>
+                            <li><a href="../Hangman/hangman.html" target="_blank">Hangman</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>    
+
+    <!-- NAVIGATON MENU SECTION ENDS -->
+
+    </div>
+    <div class="clock-container">
+        <div class="clock">
+            <div class="time-box">
+                <div id="day">FR</div>
+                <div class="label">DAY</div>
+            </div>
+            <div class="time-box">
+                <div id="hour">00</div>
+                <div class="label">HOURS</div>
+            </div>
+            <div class="time-box">
+                <div id="minute">00</div>
+                <div class="label">MINUTES</div>
+            </div>
+            <div class="time-box">
+                <div id="second">00</div>
+                <div class="label">SECONDS</div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function updateClock() {
+            const now = new Date();
+            
+            const days = ["SU", "MO", "TU", "WE", "TH", "FR", "SA"];
+            const day = days[now.getDay()];
+            const hour = String(now.getHours()).padStart(2, '0');
+            const minute = String(now.getMinutes()).padStart(2, '0');
+            const second = String(now.getSeconds()).padStart(2, '0');
+
+            document.getElementById('day').textContent = day;
+            document.getElementById('hour').textContent = hour;
+            document.getElementById('minute').textContent = minute;
+            document.getElementById('second').textContent = second;
+        }
+
+        setInterval(updateClock, 1000);
+        updateClock();
+    </script>
+</body>
+<style>
+    .nav button a{
+        text-decoration: none;
+        color: #fff;
+    }
+    .nav {
+        width: 100%;
+        position: fixed;
+        top: 0;
+        left: 0;
+        display: flex;
+        justify-content: center;
+    
+        backface-visibility: hidden;
+        padding: 15px;
+        z-index: 10;} 
+
+    .nav button {
+        background-color: #013220;
+        color: white;
+        font-size: 1em;
+        padding: 10px 60px;
+        margin: 0 10px;
+        border: none;
+        cursor: pointer;
+        border-radius: 5px;
+    }
+
+    .nav button.active {
+        background-color: #D2691E;
+    }
+.nav button:hover{
+border-radius: 15px;
+transition: 0.3s;
+background: linear-gradient(100deg, #013220, #D2691E);;
+}
+    body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        color: white;
+        font-family: 'Times New Roman', Times, serif;
+        text-align: center;
+        margin: 0;
+        background: linear-gradient(50deg, #013220, #D2691E);
+    }
+
+    .clock-container {
+        width: 100%;
+        max-width: 600px;
+        background-color: #080808;
+        border-radius: 15px;
+        padding: 60px 20px;
+        box-shadow: 1px 1px 1px rgba(255, 255, 255, .15), 0 15px 90px 30px rgba(0, 0, 0, .25);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+
+    .clock {
+        display: flex;
+        gap: 20px;
+        font-size: 4em;
+        justify-content: center;
+    }
+
+    .time-box {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .label {
+        font-size: 0.5em;
+        color: #999;
+        margin-top: 5px;
+    }
+</style>
+</html>

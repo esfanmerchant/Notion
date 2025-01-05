@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" />
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed&family=Barlow:wght@600;700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+  </style>
+  <link rel="icon" href="NotionImages/Notion-logo.svg.png" type="image/x-icon">
+  <link rel="stylesheet" href="style.css">
+  <title>ESHS - Finance Managerh</title>
+</head>
+
+<body>
+  <!-- NAVIGATON MENU SECTION STARTS -->
+
+  <header>
+    <div class="navBar">
+      <div class="content">
+        <img src="NotionImages/getzelt.com-integrate-notion-with-zelt-notion-logo.jpeg">
+        <div class="dropdown">
+          <a href="../notion.html">Home</a>
+        </div>
+        <div class="dropdown">
+          <a href="#">Notes & To Dos<i class="fa-solid fa-caret-down"></i></a>
+          <div class="dropdown_menu" id="menu3">
+            <ul>
+              <li><a href="../../Notepad/notepad.html" target="_blank">Notepad</a></li>
+              <li><a href="../../To DO list/tasklist.html" target="_blank">Task List</a></li>
+              <li><a href="https://chat.openai.com" target="_blank">Ai Assistant</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="dropdown">
+          <a href="#">Clock Tools <i class="fa-solid fa-caret-down"></i></a>
+          <div class="dropdown_menu" id="menu3">
+            <ul>
+              <li><a href="../Clock/Clock/wc.html" target="_blank">World Clock</a></li>
+              <li><a href="../Clock/Reminder/reminder.html" target="_blank">Reminder</a></li>
+              <li><a href="../Clock/Timer/timer.html" target="_blank">Stopwatch</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="dropdown">
+          <a href="#">Finance <i class="fa-solid fa-caret-down"></i></a>
+          <div class="dropdown_menu" id="menu3">
+            <ul>
+              <li><a href="../../Finance Manager/index.html" target="_blank">Finance Tracker</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="dropdown">
+          <a href="#">Games <i class="fa-solid fa-caret-down"></i></a>
+          <div class="dropdown_menu" id="menu4">
+            <ul>
+              <li><a href="../../Rock Paper Scissors/rockPaperScissors.html" target="_blank">Rock Paper
+                  Scissors</a></li>
+              <li><a href="../Tic Tac Toe/tictactoe.html" target="_blank">Tic Tac Toe</a></li>
+              <li><a href="../../Hangman/hangman.html" target="_blank">Hangman</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- NAVIGATION MENU ENDS -->
+  <div id="hehe">
+    <h2>Finance Manager</h2>
+    <div class="container">
+      <h4>Your Balance</h4>
+      <h1 id="balance">Rs. 0.00</h1>
+      <div class="inc-exp-container">
+        <div>
+          <h4>Income</h4>
+          <p id="money-plus" class="money-plus">
+            +Rs. 0.00
+          </p>
+        </div>
+        <div>
+          <h4>Expense</h4>
+          <p id="money-minus" class="money-minus">
+            -Rs. 0.00
+          </p>
+        </div>
+      </div>
+
+      <h3>History</h3>
+      <ul id="list" class="list">
+      </ul>
+      <h3>Add New Transaction</h3>
+      <form id="form">
+        <div class="form-control">
+          <label for="text">Text</label>
+          <input type="text" id="text" placeholder="Enter Text...." />
+        </div>
+        <div class="form-control">
+          <label for="amount">Amount <br> (negative - expense ,positive - income )</label>
+          <input type="number" id="amount" placeholder="Enter amount...">
+        </div>
+        <button class="btn">All transaction</button>
+      </form>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+
+</html>
